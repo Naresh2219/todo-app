@@ -7,18 +7,8 @@
   
     <!-- Input field for adding new to-dos -->
     <div>
-      <input 
-        type="text" 
-        [(ngModel)]="newTodo" 
-        placeholder="Add a new to-do..." 
-        aria-label="New To-Do"
-      />
-       <button 
-        (click)="addTodo()" 
-        aria-label="Add To-Do"
-      >
-        Add
-      </button>
+      <input type="text" [(ngModel)]="newTodo" placeholder="Add a new to-do..." aria-label="New To-Do"/>
+      <button (click)="addTodo()" aria-label="Add To-Do">Add</button>
     </div>
   
     <!-- List of to-dos -->
@@ -27,39 +17,15 @@
         {{ todo.text }} - {{ todo.timestamp | date: 'short' }}
   
         <!-- Button to delete to-dos -->
-        <button 
-          (click)="deleteTodo(i)" 
-          aria-label="Delete To-Do"
-        >
-          Delete
-        </button>
+        <button (click)="deleteTodo(i)" aria-label="Delete To-Do"> Delete</button>
         
         <!-- Field for updating to-do text -->
-        <input 
-          type="text" 
-          [(ngModel)]="updateTodoText" 
-          placeholder="Edit to-do text..." 
-          aria-label="Update To-Do Text"
-        />
-        <button 
-          (click)="updateTodo(i)" 
-          aria-label="Update To-Do"
-        >
-          Update
-        </button>
+        <input type="text" [(ngModel)]="updateTodoText" placeholder="Edit to-do text..." aria-label="Update To-Do Text"/>
+
+        <button (click)="updateTodo(i)" aria-label="Update To-Do">Update</button>
         
         <!-- Field for setting the reminder time -->
-        <input 
-          type="datetime-local" 
-          [(ngModel)]="reminderTime" 
-          aria-label="Set Reminder Time"
-        />
-        <button 
-          (click)="setReminder(i, reminderTime)" 
-          aria-label="Set Reminder"
-        >
-          Set Reminder
-        </button>
+        <input type="datetime-local" [(ngModel)]="reminderTime" aria-label="Set Reminder Time"/><button  (click)="setReminder(i, reminderTime)"  aria-label="Set Reminder">Set Reminder</button>
       </li>
     </ul>
     
