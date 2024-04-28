@@ -2,11 +2,11 @@
     Welcome to Your To-Do List
   </h1>
   
-  <div class="todo-container" style="color: #76e5fc;">
+  <div class="todo-container">
     <h2>My To-Do List</h2>
   
     <!-- Input field for adding new to-dos -->
-    <div>
+    <div class="input-field">
       <input type="text" [(ngModel)]="newTodo" placeholder="Add a new to-do..." aria-label="New To-Do"/>
       <button (click)="addTodo()" aria-label="Add To-Do">Add</button>
     </div>
